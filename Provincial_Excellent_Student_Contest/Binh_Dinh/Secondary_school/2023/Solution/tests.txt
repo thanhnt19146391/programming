@@ -1,0 +1,23 @@
+4 2
+abab
+
+4 2
+aabc
+
+6 3
+aaaaaa
+
+7 3
+aaaaaaa
+
+4 2 
+baca
+
+4 2
+baba
+
+9 3
+aaabbbbcc
+
+5 3
+abbcc
