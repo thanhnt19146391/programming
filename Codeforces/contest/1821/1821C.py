@@ -17,16 +17,19 @@ def bfs(start):
             res = cnt
             break
         if len(vertex) > 1:
-            for k in range(2, len(vertex)):
-                s1 = ''.join(vertex[i] for i in range(0, len(vertex), k))
-                s2 = ''.join(vertex[i] for i in range(1, len(vertex), k))
-                print(s1, s2)
-                queue.extend([(s1, cnt + 1), [s2, cnt + 1]])
+            s1 = ''.join(vertex[i] for i in range(0, len(vertex), 2))
+            s2 = ''.join(vertex[i] for i in range(1, len(vertex), 2))
+            queue.extend([(s1, cnt + 1), [s2, cnt + 1]])
         
     print(res)
 
 def solve():
-    bfs(s)
+    _s = s[0]
+    for i in range(1, len(s)):
+        if s[i] != _s[len(_s) - 1]:
+            _s += s[i]
+    # print(_s)
+    bfs(_s)
 
 if __name__ == '__main__':
     t = int(input())
